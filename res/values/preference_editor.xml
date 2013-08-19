@@ -90,6 +90,7 @@
     <string name="chats_receipt">Message delivery receipts\nSend and receive message delivery receipts</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_chat_viewer.png -->
     <string name="chats_show_avatars">Avatars in messages\nShow avatars in each message</string>
+    <string name="chats_show_message_icons">Message status icons\nShow message status icons in each message</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_chat_viewer.png -->
     <string name="chats_show_status_change">Show status changes\nShow messages about status changes</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_chat_viewer_status.png -->

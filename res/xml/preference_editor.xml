@@ -104,6 +104,11 @@
                 android:defaultValue="@bool/chats_show_avatars_default"
                 />
             <CheckBoxPreference
+                android:title="@string/chats_show_message_icons"
+                android:key="@string/chats_show_message_icons_key"
+                android:defaultValue="@bool/chats_show_message_icons_default"
+                />
+            <CheckBoxPreference
                 android:title="@string/chats_send_by_enter"
                 android:key="@string/chats_send_by_enter_key"
                 android:defaultValue="@bool/chats_send_by_enter_default"

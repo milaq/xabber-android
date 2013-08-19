@@ -207,7 +207,8 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 				else if (!messageItem.isDelivered())
 					messageResource = R.drawable.ic_message_not_delivered;
 			}
-			append(builder, " ", new ImageSpan(activity, messageResource));
+			if (SettingsManager.chatsShowMessageIcons())
+				append(builder, " ", new ImageSpan(activity, messageResource));
 			append(builder, " ", new TextAppearanceSpan(activity,
 					R.style.ChatHeader));
 			append(builder, time, new TextAppearanceSpan(activity,

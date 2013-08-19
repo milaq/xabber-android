@@ -425,6 +425,11 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.chats_show_avatars_default);
 	}
 
+	public static boolean chatsShowMessageIcons() {
+		return getBoolean(R.string.chats_show_message_icons_key,
+				R.bool.chats_show_message_icons_default);
+	}
+
 	public static boolean chatsSendByEnter() {
 		return getBoolean(R.string.chats_send_by_enter_key,
 				R.bool.chats_send_by_enter_default);
