@@ -221,6 +221,9 @@
     <string name="chats_timestamp_bottom_key">chats_timestamp_bottom</string>
     <bool name="chats_timestamp_bottom_default">false</bool>
 
+    <string name="chats_show_nick_key">chats_show_nick</string>
+    <bool name="chats_show_nick_default">true</bool>
+
     <string name="chats_nick_substitution_key">chats_nick_substitution</string>
     <bool name="chats_nick_substitution_default">false</bool>
 

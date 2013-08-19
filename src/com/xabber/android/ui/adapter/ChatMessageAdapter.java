@@ -221,10 +221,12 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 					R.style.ChatHeader_Time));
 			append(builder, " ", new TextAppearanceSpan(activity,
 					R.style.ChatHeader));
-			append(builder, name, new TextAppearanceSpan(activity,
-					R.style.ChatHeader_Name));
-			append(builder, divider, new TextAppearanceSpan(activity,
-					R.style.ChatHeader));
+			if (SettingsManager.chatsShowNick())
+				append(builder, name, new TextAppearanceSpan(activity,
+						R.style.ChatHeader_Name));
+			if (SettingsManager.chatsShowNick() || !SettingsManager.chatsTimestampBottom() || SettingsManager.chatsShowMessageIcons())
+				append(builder, divider, new TextAppearanceSpan(activity, 
+						R.style.ChatHeader));
 			Date timeStamp = messageItem.getDelayTimestamp();
 			if (timeStamp != null) {
 				String delay = activity.getString(
