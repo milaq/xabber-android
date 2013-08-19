@@ -210,8 +210,6 @@
     <bool name="events_first_only_default">false</bool>
 
 <!-- preference_chats -->
-	<string name="preference_chats">@string/chat_viewer</string>
-
     <string name="chats_show_avatars_key">chats_show_avatars</string>
     <bool name="chats_show_avatars_default">false</bool>
 
