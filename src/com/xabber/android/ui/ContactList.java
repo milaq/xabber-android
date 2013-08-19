@@ -431,13 +431,13 @@ public class ContactList extends ManagedListActivity implements
 		menu.add(0, OPTION_MENU_STATUS_EDITOR_ID, 0,
 				getText(R.string.status_editor)).setIcon(
 				R.drawable.ic_menu_notifications);
-		menu.add(0, OPTION_MENU_EXIT_ID, 0, getText(R.string.exit)).setIcon(
-				android.R.drawable.ic_menu_close_clear_cancel);
+		menu.add(0, OPTION_MENU_CHAT_LIST_ID, 0, getText(R.string.chat_list))
+		.setIcon(R.drawable.ic_menu_friendslist);
 		menu.add(0, OPTION_MENU_JOIN_ROOM_ID, 0, getText(R.string.muc_add));
 		menu.add(0, OPTION_MENU_SEARCH_ID, 0,
 				getText(android.R.string.search_go));
-		menu.add(0, OPTION_MENU_CHAT_LIST_ID, 0, getText(R.string.chat_list))
-				.setIcon(R.drawable.ic_menu_friendslist);
+		menu.add(0, OPTION_MENU_EXIT_ID, 0, getText(R.string.exit)).setIcon(
+				android.R.drawable.ic_menu_close_clear_cancel);
 		return true;
 	}
 
