@@ -126,7 +126,7 @@
                 android:title="@string/chats_nick_substitution"
                 android:key="@string/chats_nick_substitution_key"
                 android:defaultValue="@bool/chats_nick_substitution_default"
-                />
+                android:dependency="@string/chats_show_nick_key"/>
             <CheckBoxPreference
                 android:title="@string/chats_send_by_enter"
                 android:key="@string/chats_send_by_enter_key"
