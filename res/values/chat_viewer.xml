@@ -147,4 +147,5 @@
     <string name="otr_verify_question">Verify with question</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/chat_viewer_option_menu_otr_02.png -->
     <string name="otr_verify_secret">Verify with shared secret</string>
+    <string name="substituted_nick">Me</string>
 </resources>

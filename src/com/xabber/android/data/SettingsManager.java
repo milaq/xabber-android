@@ -436,6 +436,11 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.chats_timestamp_bottom_default);
 	}
 
+	public static boolean chatsNickSubstitution() {
+		return getBoolean(R.string.chats_nick_substitution_key,
+				R.bool.chats_nick_substitution_default);
+	}
+
 	public static boolean chatsSendByEnter() {
 		return getBoolean(R.string.chats_send_by_enter_key,
 				R.bool.chats_send_by_enter_default);

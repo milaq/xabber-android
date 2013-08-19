@@ -178,10 +178,15 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 		if (isMUC) {
 			name = resource;
 		} else {
-			if (incoming)
+			if (incoming) {
 				name = RosterManager.getInstance().getName(account, user);
-			else
-				name = AccountManager.getInstance().getNickName(account);
+			}
+			else {
+				if (!SettingsManager.chatsNickSubstitution())
+					name = AccountManager.getInstance().getNickName(account);
+				else
+					name = activity.getString(R.string.substituted_nick);
+			}
 		}
 		if (incoming) {
 			if (view.getBackground() == null)

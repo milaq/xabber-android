@@ -114,6 +114,11 @@
                 android:defaultValue="@bool/chats_timestamp_bottom_default"
                 />
             <CheckBoxPreference
+                android:title="@string/chats_nick_substitution"
+                android:key="@string/chats_nick_substitution_key"
+                android:defaultValue="@bool/chats_nick_substitution_default"
+                />
+            <CheckBoxPreference
                 android:title="@string/chats_send_by_enter"
                 android:key="@string/chats_send_by_enter_key"
                 android:defaultValue="@bool/chats_send_by_enter_default"
