@@ -211,7 +211,8 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 				append(builder, " ", new ImageSpan(activity, messageResource));
 			append(builder, " ", new TextAppearanceSpan(activity,
 					R.style.ChatHeader));
-			append(builder, time, new TextAppearanceSpan(activity,
+			if (!SettingsManager.chatsTimestampBottom())
+				append(builder, time, new TextAppearanceSpan(activity,
 					R.style.ChatHeader_Time));
 			append(builder, " ", new TextAppearanceSpan(activity,
 					R.style.ChatHeader));
@@ -243,6 +244,9 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 			else
 				append(builder, text, new TextAppearanceSpan(activity,
 						R.style.ChatRead));
+			if (SettingsManager.chatsTimestampBottom())
+				append(builder, "\n" + time, new TextAppearanceSpan(activity,
+					R.style.ChatHeader_Time));
 		} else {
 			append(builder, time, new TextAppearanceSpan(activity,
 					R.style.ChatHeader_Time));

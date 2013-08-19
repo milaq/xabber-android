@@ -431,6 +431,11 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.chats_show_message_icons_default);
 	}
 
+	public static boolean chatsTimestampBottom() {
+		return getBoolean(R.string.chats_timestamp_bottom_key,
+				R.bool.chats_timestamp_bottom_default);
+	}
+
 	public static boolean chatsSendByEnter() {
 		return getBoolean(R.string.chats_send_by_enter_key,
 				R.bool.chats_send_by_enter_default);

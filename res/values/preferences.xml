@@ -218,6 +218,9 @@
     <string name="chats_show_message_icons_key">chats_show_message_icons</string>
     <bool name="chats_show_message_icons_default">true</bool>
 
+    <string name="chats_timestamp_bottom_key">chats_timestamp_bottom</string>
+    <bool name="chats_timestamp_bottom_default">false</bool>
+
     <string name="contacts_reset_offline_key">contacts_reset_offline</string>
 
     <string name="chats_send_by_enter_key">chats_send_by_enter</string>
