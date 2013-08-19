@@ -86,6 +86,13 @@
     <string name="in_30m_value">1800000</string>
     <string name="in_1h_value">3600000</string>
 
+    <string name="t_15s_value">15000</string>
+    <string name="t_30s_value">30000</string>
+    <string name="t_1m_value">60000</string>
+    <string name="t_2m_value">120000</string>
+    <string name="t_3m_value">180000</string>
+    <string name="t_5m_value">300000</string>
+
     <string name="default_sound">com.xabber.android.DEFAULT_SOUND</string>
 
 <!-- preference_interface -->
@@ -340,6 +347,25 @@
 
     <string name="connection_wifi_lock_key">connection_wifi_lock</string>
     <bool name="connection_wifi_lock_default">true</bool>
+
+    <string name="connection_heartbeat_key">connection_heartbeat</string>
+    <string-array name="connection_heartbeat_entries">
+        <item>@string/t15s</item>
+        <item>@string/t30s</item>
+        <item>@string/t1m</item>
+        <item>@string/t2m</item>
+        <item>@string/t3m</item>
+        <item>@string/t5m</item>
+    </string-array>
+    <string-array name="connection_heartbeat_entryvalues">
+        <item>@string/t_15s_value</item>
+        <item>@string/t_30s_value</item>
+        <item>@string/t_1m_value</item>
+        <item>@string/t_2m_value</item>
+        <item>@string/t_3m_value</item>
+        <item>@string/t_5m_value</item>
+    </string-array>
+    <string name="connection_heartbeat_default">@string/t_30s_value</string>
 
     <string name="connection_wake_lock_key">connection_wake_lock_key</string>
     <bool name="connection_wake_lock_default">false</bool>

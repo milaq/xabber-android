@@ -30,6 +30,7 @@ import android.text.TextUtils;
 
 import com.xabber.android.data.account.AccountManager;
 import com.xabber.android.data.account.StatusMode;
+import com.xabber.android.data.connection.ConnectionManager;
 import com.xabber.android.data.connection.NetworkManager;
 import com.xabber.android.data.extension.attention.AttentionManager;
 import com.xabber.android.data.extension.otr.OTRManager;
@@ -551,6 +552,11 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.connection_wake_lock_default);
 	}
 
+	public static int connectionHeartbeat() {
+		return Integer.parseInt(getString(R.string.connection_heartbeat_key,
+				R.string.connection_heartbeat_default));		
+	}
+
 	public static boolean connectionStartAtBoot() {
 		return getBoolean(R.string.connection_start_at_boot_key,
 				R.bool.connection_start_at_boot_default);
@@ -772,6 +778,9 @@ public class SettingsManager implements OnInitializedListener,
 		} else if (key.equals(Application.getInstance().getString(
 				R.string.connection_wifi_lock_key))) {
 			NetworkManager.getInstance().onWifiLockSettingsChanged();
+		} else if (key.equals(Application.getInstance().getString(
+				R.string.connection_heartbeat_key))) {
+			ConnectionManager.getInstance().forceReconnect();
 		} else if (key.equals(Application.getInstance().getString(
 				R.string.events_show_text_key))) {
 			NotificationManager.getInstance().onMessageNotification();

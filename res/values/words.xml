@@ -14,6 +14,12 @@
     <string name="in30m">In 30 minutes</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_connection_away.png -->
     <string name="in5m">In 5 minutes</string>
+    <string name="t15s">15 seconds</string>
+    <string name="t30s">30 seconds</string>
+    <string name="t1m">1 minute</string>
+    <string name="t2m">2 minutes</string>
+    <string name="t3m">3 minutes</string>
+    <string name="t5m">5 minutes</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_chat_viewer_status.png -->
     <string name="always">Always</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_security_otr.png -->

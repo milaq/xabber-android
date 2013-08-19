@@ -111,6 +111,7 @@
     <string name="connection_wake_lock">Prevent sleep mode\nWill reduce battery life</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_connection_01.png -->
     <string name="connection_wifi_lock">Keep WiFi awake\nKeep WiFi active while on standby. Will reduce battery life</string>
+    <string name="connection_heartbeat">Heartbeat interval\nHigher values will reduce power consumption but setting this too high will increase the chance to lose messages on bad connections</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_contact_list_01.png -->
     <string name="contacts_reset_offline">Reset offline settings\nClear individual settings for groups and accounts</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_contact_list_reset_offline.png -->

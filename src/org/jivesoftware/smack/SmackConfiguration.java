@@ -23,6 +23,8 @@ package org.jivesoftware.smack;
 import org.xmlpull.v1.XmlPullParserFactory;
 import org.xmlpull.v1.XmlPullParser;
 
+import com.xabber.android.data.SettingsManager;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.util.*;
@@ -173,7 +175,7 @@ public final class SmackConfiguration {
      *      no keep-alive should be sent.
      */
     public static int getKeepAliveInterval() {
-        return keepAliveInterval;
+    	return (SettingsManager.connectionHeartbeat());
     }
 
     /**
@@ -196,7 +198,7 @@ public final class SmackConfiguration {
 	 * @return
 	 */
 	public static int getKeepAliveResponse() {
-		return keepAliveResponse;
+    	return (SettingsManager.connectionHeartbeat());
 	}
 
 	/**
