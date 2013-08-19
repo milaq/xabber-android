@@ -217,7 +217,7 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 				append(builder, " ", new TextAppearanceSpan(activity,
 						R.style.ChatHeader));
 			}
-			if (!SettingsManager.chatsTimestampBottom()) {
+			if (SettingsManager.chatsTimestampPosition() == 0) {
 				append(builder, time, new TextAppearanceSpan(activity,
 						R.style.ChatHeader_Time));
 				append(builder, " ", new TextAppearanceSpan(activity,
@@ -226,7 +226,7 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 			if (SettingsManager.chatsShowNick())
 				append(builder, name, new TextAppearanceSpan(activity,
 						R.style.ChatHeader_Name));
-			if (SettingsManager.chatsShowNick() || !SettingsManager.chatsTimestampBottom() || SettingsManager.chatsShowMessageIcons())
+			if (SettingsManager.chatsShowNick() || SettingsManager.chatsTimestampPosition() == 0 || SettingsManager.chatsShowMessageIcons())
 				append(builder, divider, new TextAppearanceSpan(activity, 
 						R.style.ChatHeader));
 			Date timeStamp = messageItem.getDelayTimestamp();
@@ -253,7 +253,7 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 			else
 				append(builder, text, new TextAppearanceSpan(activity,
 						R.style.ChatRead));
-			if (SettingsManager.chatsTimestampBottom())
+			if (SettingsManager.chatsTimestampPosition() == 1)
 				append(builder, "\n" + time, new TextAppearanceSpan(activity,
 					R.style.ChatHeader_Time));
 		} else {

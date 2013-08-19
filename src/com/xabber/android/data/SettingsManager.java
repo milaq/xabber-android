@@ -431,9 +431,23 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.chats_show_message_icons_default);
 	}
 
-	public static boolean chatsTimestampBottom() {
-		return getBoolean(R.string.chats_timestamp_bottom_key,
-				R.bool.chats_timestamp_bottom_default);
+	public static int chatsTimestampPosition() {
+		String value = getString(R.string.chats_timestamp_position_key,
+				R.string.chats_timestamp_position_default);
+		if (Application.getInstance()
+				.getString(R.string.chats_timestamp_position_prepend_value)
+				.equals(value))
+			return 0;
+		else if (Application.getInstance()
+				.getString(R.string.chats_timestamp_position_append_value)
+				.equals(value))
+			return 1;
+		else if (Application.getInstance()
+				.getString(R.string.chats_timestamp_position_hide_value)
+				.equals(value))
+			return 2;
+		else
+			throw new IllegalStateException();
 	}
 
 	public static boolean chatsShowNick() {

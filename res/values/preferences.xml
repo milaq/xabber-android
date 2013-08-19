@@ -218,8 +218,21 @@
     <string name="chats_show_message_icons_key">chats_show_message_icons</string>
     <bool name="chats_show_message_icons_default">true</bool>
 
-    <string name="chats_timestamp_bottom_key">chats_timestamp_bottom</string>
-    <bool name="chats_timestamp_bottom_default">false</bool>
+    <string name="chats_timestamp_position_key">chats_timestamp_position</string>
+    <string name="chats_timestamp_position_prepend_value">prepend</string>
+    <string name="chats_timestamp_position_append_value">append</string>
+    <string name="chats_timestamp_position_hide_value">hide</string>
+    <string-array name="chats_timestamp_position_entries">
+        <item>@string/chats_timestamp_position_prepend</item>
+        <item>@string/chats_timestamp_position_append</item>
+        <item>@string/chats_timestamp_position_hide</item>
+    </string-array>
+    <string-array name="chats_timestamp_position_entryvalues">
+        <item>@string/chats_timestamp_position_prepend_value</item>
+        <item>@string/chats_timestamp_position_append_value</item>
+        <item>@string/chats_timestamp_position_hide_value</item>
+    </string-array>
+    <string name="chats_timestamp_position_default">@string/chats_timestamp_position_prepend_value</string>
 
     <string name="chats_show_nick_key">chats_show_nick</string>
     <bool name="chats_show_nick_default">true</bool>
