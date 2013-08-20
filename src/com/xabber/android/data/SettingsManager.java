@@ -469,9 +469,23 @@ public class SettingsManager implements OnInitializedListener,
 			throw new IllegalStateException();
 	}
 
-	public static boolean chatsShowNick() {
-		return getBoolean(R.string.chats_show_nick_key,
-				R.bool.chats_show_nick_default);
+	public static int chatsShowNick() {
+		String value = getString(R.string.chats_show_nick_key,
+				R.string.chats_show_nick_default);
+		if (Application.getInstance()
+				.getString(R.string.chats_show_nick_always_value)
+				.equals(value))
+			return 2;
+		else if (Application.getInstance()
+				.getString(R.string.chats_show_nick_conference_value)
+				.equals(value))
+			return 1;
+		else if (Application.getInstance()
+				.getString(R.string.chats_show_nick_never_value)
+				.equals(value))
+			return 0;
+		else
+			throw new IllegalStateException();
 	}
 
 	public static boolean chatsNickSubstitution() {

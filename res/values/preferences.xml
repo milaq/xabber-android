@@ -252,7 +252,20 @@
     <string name="chats_timestamp_position_default">@string/chats_timestamp_position_prepend_value</string>
 
     <string name="chats_show_nick_key">chats_show_nick</string>
-    <bool name="chats_show_nick_default">true</bool>
+    <string name="chats_show_nick_always_value">always</string>
+    <string name="chats_show_nick_conference_value">conference</string>
+    <string name="chats_show_nick_never_value">never</string>
+    <string-array name="chats_show_nick_entries">
+        <item>@string/always</item>
+        <item>@string/chats_show_status_change_muc</item>
+        <item>@string/never</item>
+        </string-array>
+    <string-array name="chats_show_nick_entryvalues">
+        <item>@string/chats_show_nick_always_value</item>
+        <item>@string/chats_show_nick_conference_value</item>
+        <item>@string/chats_show_nick_never_value</item>
+    </string-array>
+    <string name="chats_show_nick_default">always</string>
 
     <string name="chats_nick_substitution_key">chats_nick_substitution</string>
     <bool name="chats_nick_substitution_default">false</bool>

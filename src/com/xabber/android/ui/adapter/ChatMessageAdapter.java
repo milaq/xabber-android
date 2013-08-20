@@ -176,6 +176,7 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 		final String resource = messageItem.getResource();
 		final int avatarSize = SettingsManager.chatsAvatarSize();
 		final boolean incoming = messageItem.isIncoming();
+		final boolean showNick = SettingsManager.chatsShowNick() == 2 || (SettingsManager.chatsShowNick() == 1 && isMUC);
 		if (!incoming && SettingsManager.chatsNickSubstitution()) {
 			name = activity.getString(R.string.substituted_nick);
 		} else {
@@ -223,10 +224,10 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 				append(builder, " ", new TextAppearanceSpan(activity,
 						R.style.ChatHeader));
 			}
-			if (SettingsManager.chatsShowNick())
+			if (showNick)
 				append(builder, name, new TextAppearanceSpan(activity,
 						R.style.ChatHeader_Name));
-			if (SettingsManager.chatsShowNick() || SettingsManager.chatsTimestampPosition() == 0 || SettingsManager.chatsShowMessageIcons())
+			if (showNick || SettingsManager.chatsTimestampPosition() == 0 || SettingsManager.chatsShowMessageIcons())
 				append(builder, divider, new TextAppearanceSpan(activity, 
 						R.style.ChatHeader));
 			Date timeStamp = messageItem.getDelayTimestamp();

@@ -126,10 +126,14 @@
                 android:entryValues="@array/chats_timestamp_position_entryvalues"
                 android:defaultValue="@string/chats_timestamp_position_default"
                 />
-            <CheckBoxPreference
+            <ListPreference
                 android:title="@string/chats_show_nick"
+                android:summary="@string/chats_show_nick"
+                android:dialogTitle="@string/chats_show_nick"
                 android:key="@string/chats_show_nick_key"
-                android:defaultValue="@bool/chats_show_nick_default"
+                android:entries="@array/chats_show_nick_entries"
+                android:entryValues="@array/chats_show_nick_entryvalues"
+                android:defaultValue="@string/chats_show_nick_default"
                 />
             <CheckBoxPreference
                 android:title="@string/chats_nick_substitution"
