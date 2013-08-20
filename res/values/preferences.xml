@@ -213,6 +213,25 @@
     <string name="chats_show_avatars_key">chats_show_avatars</string>
     <bool name="chats_show_avatars_default">false</bool>
 
+    <string name="chats_avatar_size_key">chats_avatar_size</string>
+    <string name="chats_avatar_size_small_value">small</string>
+    <string name="chats_avatar_size_normal_value">normal</string>
+    <string name="chats_avatar_size_large_value">large</string>
+    <string name="chats_avatar_size_xlarge_value">xlarge</string>
+    <string-array name="chats_avatar_size_entries">
+        <item>@string/chats_font_size_small</item>
+        <item>@string/chats_font_size_normal</item>
+        <item>@string/chats_font_size_large</item>
+        <item>@string/chats_font_size_xlarge</item>
+        </string-array>
+    <string-array name="chats_avatar_size_entryvalues">
+        <item>@string/chats_avatar_size_small_value</item>
+        <item>@string/chats_avatar_size_normal_value</item>
+        <item>@string/chats_avatar_size_large_value</item>
+        <item>@string/chats_avatar_size_xlarge_value</item>
+    </string-array>
+    <string name="chats_avatar_size_default">@string/chats_avatar_size_small_value</string>
+
     <string name="chats_show_message_icons_key">chats_show_message_icons</string>
     <bool name="chats_show_message_icons_default">true</bool>
 

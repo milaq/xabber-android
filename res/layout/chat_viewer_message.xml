@@ -25,6 +25,7 @@
         android:id="@+id/avatar"
         android:layout_width="32dip"
         android:layout_height="32dip"
+        android:scaleType="fitXY"
         android:layout_marginLeft="4dip"
         android:src="@drawable/avatar_1_1"
         />

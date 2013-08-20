@@ -426,6 +426,25 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.chats_show_avatars_default);
 	}
 
+	public static int chatsAvatarSize() {
+		String value = getString(R.string.chats_avatar_size_key,
+				R.string.chats_avatar_size_default);
+		if (Application.getInstance()
+				.getString(R.string.chats_avatar_size_small_value).equals(value))
+			return 32;
+		else if (Application.getInstance()
+				.getString(R.string.chats_avatar_size_normal_value).equals(value))
+			return 48;
+		else if (Application.getInstance()
+				.getString(R.string.chats_avatar_size_large_value).equals(value))
+			return 64;
+		else if (Application.getInstance()
+				.getString(R.string.chats_avatar_size_xlarge_value).equals(value))
+			return 96;
+		else
+			throw new IllegalStateException();
+	}
+
 	public static boolean chatsShowMessageIcons() {
 		return getBoolean(R.string.chats_show_message_icons_key,
 				R.bool.chats_show_message_icons_default);

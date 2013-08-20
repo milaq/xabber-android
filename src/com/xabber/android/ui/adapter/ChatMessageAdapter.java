@@ -174,6 +174,7 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 		final String account = messageItem.getChat().getAccount();
 		final String user = messageItem.getChat().getUser();
 		final String resource = messageItem.getResource();
+		final int avatarSize = SettingsManager.chatsAvatarSize();
 		final boolean incoming = messageItem.isIncoming();
 		if (!incoming && SettingsManager.chatsNickSubstitution()) {
 			name = activity.getString(R.string.substituted_nick);
@@ -270,6 +271,8 @@ public class ChatMessageAdapter extends BaseAdapter implements UpdatableAdapter 
 		textView.setMovementMethod(LinkMovementMethod.getInstance());
 		if (SettingsManager.chatsShowAvatars()) {
 			avatarView.setVisibility(View.VISIBLE);
+			RelativeLayout.LayoutParams avatarLayout = new RelativeLayout.LayoutParams(avatarSize, avatarSize);
+			avatarView.setLayoutParams(avatarLayout);
 			if (!incoming
 					|| (isMUC && MUCManager.getInstance()
 							.getNickname(account, user)
