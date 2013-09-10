@@ -15,4 +15,5 @@
 <resources>
     <color name="bright_foreground_dark">#ffffffff</color>
     <color name="bright_foreground_light">#ff000000</color>
+    <color name="text_hairline">#ffaaaaaa</color>
 </resources>

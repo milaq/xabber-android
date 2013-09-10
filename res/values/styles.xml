@@ -32,7 +32,7 @@
     </style>
 
     <style name="ChatHeader.Time">
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textColor">@color/text_hairline</item>
     </style>
 
     <style name="ChatHeader.Name">
