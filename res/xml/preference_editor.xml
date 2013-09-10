@@ -126,6 +126,11 @@
                 android:entryValues="@array/chats_timestamp_position_entryvalues"
                 android:defaultValue="@string/chats_timestamp_position_default"
                 />
+            <CheckBoxPreference
+                android:title="@string/chats_timestamp_seconds"
+                android:key="@string/chats_timestamp_seconds_key"
+                android:defaultValue="@bool/chats_timestamp_seconds_default"
+                />
             <ListPreference
                 android:title="@string/chats_show_nick"
                 android:summary="@string/chats_show_nick"

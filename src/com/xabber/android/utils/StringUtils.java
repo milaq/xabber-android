@@ -17,6 +17,8 @@ package com.xabber.android.utils;
 import java.text.DateFormat;
 import java.util.Date;
 
+import com.xabber.android.data.SettingsManager;
+
 import android.content.res.Resources;
 
 /**
@@ -31,9 +33,15 @@ public class StringUtils {
 	private static final DateFormat TIME;
 
 	static {
-		DATE_TIME = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,
-				DateFormat.SHORT);
-		TIME = DateFormat.getTimeInstance(DateFormat.MEDIUM);
+		if (!SettingsManager.chatsTimestampLength()) {
+			DATE_TIME = DateFormat.getDateTimeInstance(DateFormat.SHORT,
+					DateFormat.SHORT);
+			TIME = DateFormat.getTimeInstance(DateFormat.SHORT);
+		} else {
+			DATE_TIME = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,
+					DateFormat.SHORT);
+			TIME = DateFormat.getTimeInstance(DateFormat.MEDIUM);
+		}
 	}
 
 	private StringUtils() {

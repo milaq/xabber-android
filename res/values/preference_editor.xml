@@ -97,6 +97,7 @@
     <string name="chats_timestamp_position_prepend">Prepend</string>
     <string name="chats_timestamp_position_append">Append</string>
     <string name="chats_timestamp_position_hide">Hide</string>
+    <string name="chats_timestamp_seconds">Seconds in timestamps\nShow seconds in timestamps (needs app restart)</string>
     <string name="chats_show_nick">Show nicknames\nShow nicknames in each message</string>
     <string name="chats_nick_substitution">Own nick substitution\nSubstitute own nick/id with a generic \"me\"</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_chat_viewer.png -->

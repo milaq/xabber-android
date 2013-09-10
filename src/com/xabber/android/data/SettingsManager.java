@@ -468,6 +468,11 @@ public class SettingsManager implements OnInitializedListener,
 		else
 			throw new IllegalStateException();
 	}
+	
+	public static boolean chatsTimestampLength() {
+		return getBoolean(R.string.chats_timestamp_seconds_key,
+				R.bool.chats_timestamp_seconds_default);
+	}
 
 	public static int chatsShowNick() {
 		String value = getString(R.string.chats_show_nick_key,

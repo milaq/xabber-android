@@ -251,6 +251,9 @@
     </string-array>
     <string name="chats_timestamp_position_default">@string/chats_timestamp_position_prepend_value</string>
 
+    <string name="chats_timestamp_seconds_key">chats_timestamp_seconds</string>
+    <bool name="chats_timestamp_seconds_default">true</bool>
+
     <string name="chats_show_nick_key">chats_show_nick</string>
     <string name="chats_show_nick_always_value">always</string>
     <string name="chats_show_nick_conference_value">conference</string>
