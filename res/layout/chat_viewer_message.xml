@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/avatar"
-        android:paddingLeft="4dip"
+        android:paddingLeft="8dip"
         />
 
 </RelativeLayout>
