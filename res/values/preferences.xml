@@ -172,6 +172,8 @@
     <string name="events_sound_key">events_sound_uri</string>
     <string name="events_sound_default">@string/default_sound</string>
 
+    <string name="events_sound_current_key">events_sound_current_uri</string>
+
     <string name="events_vibro_key">events_vibro</string>
     <bool name="events_vibro_default">true</bool>
 
@@ -205,7 +207,7 @@
 
     <string name="events_visible_chat_key">events_visible_chat</string>
     <bool name="events_visible_chat_default">false</bool>
-    
+
     <string name="events_first_only_key">events_first_only</string>
     <bool name="events_first_only_default">false</bool>
 

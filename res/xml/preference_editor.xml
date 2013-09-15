@@ -253,6 +253,15 @@
                 android:key="@string/events_visible_chat_key"
                 android:defaultValue="@bool/events_visible_chat_default"
                 />
+            <RingtonePreference
+                android:title="@string/events_sound_current"
+                android:key="@string/events_sound_current_key"
+                android:defaultValue="@string/events_sound_default"
+                android:ringtoneType="notification"
+                android:showSilent="true" 
+                android:showDefault="true"
+                android:dependency="@string/events_visible_chat_key"
+                />
             <CheckBoxPreference
                 android:title="@string/events_first_only"
                 android:key="@string/events_first_only_key"

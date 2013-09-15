@@ -374,6 +374,7 @@ public abstract class AbstractChat extends BaseEntity {
 		boolean visible = MessageManager.getInstance().isVisibleChat(this);
 		boolean read = incoming ? visible : true;
 		boolean send = incoming;
+		boolean currentChatNotify = false;
 		if (action == null && text == null)
 			throw new IllegalArgumentException();
 		if (resource == null)
@@ -411,6 +412,8 @@ public abstract class AbstractChat extends BaseEntity {
 			notify = false;
 			if (!ChatManager.getInstance().isNotifyVisible(account, user))
 				showTicker = false;
+			else
+				currentChatNotify = true;
 		}
 		MessageItem messageItem = new MessageItem(this, record ? null
 				: NO_RECORD_TAG, resource, text, action, timestamp,
@@ -424,7 +427,7 @@ public abstract class AbstractChat extends BaseEntity {
 					timestamp, delayTimestamp, incoming, read, send);
 		if (showTicker)
 			NotificationManager.getInstance().onMessageNotification(
-					messageItem, notify);
+					messageItem, notify, currentChatNotify);
 		MessageManager.getInstance().onChatChanged(account, user, incoming);
 		return messageItem;
 	}

@@ -369,6 +369,12 @@ public class SettingsManager implements OnInitializedListener,
 				R.string.events_sound_default);
 	}
 
+	public static Uri eventsSoundCurrent() {
+		return getSound(R.string.events_sound_current_key,
+				Settings.System.DEFAULT_NOTIFICATION_URI,
+				R.string.events_sound_default);
+	}
+
 	public static boolean eventsVibro() {
 		return getBoolean(R.string.events_vibro_key,
 				R.bool.events_vibro_default);

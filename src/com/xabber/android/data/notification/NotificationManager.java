@@ -70,6 +70,7 @@ public class NotificationManager implements OnInitializedListener,
 
 	public static final int PERSISTENT_NOTIFICATION_ID = 1;
 	private static final int CHAT_NOTIFICATION_ID = 2;
+	private static final int CURRENT_CHAT_NOTIFICATION_ID = 3;
 	private static final int BASE_NOTIFICATION_PROVIDER_ID = 0x10;
 
 	private static final long VIBRATION_DURATION = 500;
@@ -80,6 +81,7 @@ public class NotificationManager implements OnInitializedListener,
 	private final Notification persistentNotification;
 	private final PendingIntent clearNotifications;
 	private final Handler handler;
+	private boolean currentChatNotify;
 
 	/**
 	 * Runnable to start vibration.
@@ -347,6 +349,11 @@ public class NotificationManager implements OnInitializedListener,
 
 		if (messageNotifications.isEmpty()) {
 			notificationManager.cancel(CHAT_NOTIFICATION_ID);
+			if (currentChatNotify) {
+				Notification notification = new Notification();
+				notification.sound = SettingsManager.eventsSoundCurrent();
+				notify(CURRENT_CHAT_NOTIFICATION_ID, notification);
+			}
 		} else {
 			int messageCount = 0;
 			for (MessageNotification messageNotification : messageNotifications)
@@ -453,8 +460,8 @@ public class NotificationManager implements OnInitializedListener,
 				persistentNotification.when = 0;
 			}
 		}
-		
-		if (SettingsManager.eventsPersistent()) {
+
+		if (SettingsManager.eventsPersistent() && !currentChatNotify) {
 			notify(PERSISTENT_NOTIFICATION_ID, persistentNotification);
 		} else {
 			notificationManager.cancel(PERSISTENT_NOTIFICATION_ID);
@@ -516,7 +523,8 @@ public class NotificationManager implements OnInitializedListener,
 	 *            Whether notification should be stored.
 	 */
 	public void onMessageNotification(MessageItem messageItem,
-			boolean addNotification) {
+			boolean addNotification, boolean focus) {
+		this.currentChatNotify = focus;
 		if (addNotification) {
 			MessageNotification messageNotification = getMessageNotification(
 					messageItem.getChat().getAccount(), messageItem.getChat()
