@@ -29,6 +29,7 @@ import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.view.View;
 import android.widget.RemoteViews;
 
 import com.xabber.android.data.Application;
@@ -392,10 +393,15 @@ public class NotificationManager implements OnInitializedListener,
 			String contactText = StringUtils.getQuantityString(
 					application.getResources(), R.array.chat_contact_quantity,
 					messageNotifications.size());
-			String status = application.getString(R.string.chat_status,
-					messageCount, messageText, messageNotifications.size(),
-					contactText);
-			chatViews.setTextViewText(R.id.text, status);
+			if (SettingsManager.eventsShowStatus()) {
+				String status = application.getString(R.string.chat_status,
+						messageCount, messageText, messageNotifications.size(),
+						contactText);
+				chatViews.setViewVisibility(R.id.text, View.VISIBLE);
+				chatViews.setTextViewText(R.id.text, status);
+			} else {
+				chatViews.setViewVisibility(R.id.text, View.GONE);
+			}
 
 			Notification notification = new Notification();
 			if (Application.SDK_INT >= 14 && SettingsManager.eventsPersistent()) {

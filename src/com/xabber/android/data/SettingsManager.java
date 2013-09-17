@@ -400,6 +400,11 @@ public class SettingsManager implements OnInitializedListener,
 				R.bool.events_show_text_default);
 	}
 
+	public static boolean eventsShowStatus() {
+		return getBoolean(R.string.events_show_status_key,
+				R.bool.events_show_status_default);
+	}
+
 	public static EventsMessage eventsMessage() {
 		String value = getString(R.string.events_message_key,
 				R.string.events_message_default);
