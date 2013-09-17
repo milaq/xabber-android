@@ -47,6 +47,7 @@ import com.xabber.android.data.account.OnAccountRemovedListener;
 import com.xabber.android.data.connection.ConnectionState;
 import com.xabber.android.data.extension.avatar.AvatarManager;
 import com.xabber.android.data.extension.muc.MUCManager;
+import com.xabber.android.data.extension.vcard.VCardManager;
 import com.xabber.android.data.message.MessageItem;
 import com.xabber.android.data.message.MessageManager;
 import com.xabber.android.data.message.chat.ChatManager;
@@ -510,7 +511,8 @@ public class NotificationManager implements OnInitializedListener,
 					AudioManager.STREAM_NOTIFICATION);
 		if (ChatManager.getInstance().isShowText(ticker.getChat().getAccount(),
 				ticker.getChat().getUser()))
-			notification.tickerText = trimText(ticker.getText());
+			notification.tickerText = trimText(VCardManager.getInstance().getName(ticker.getChat().getUser()) + 
+					": " + ticker.getText());
 	}
 
 	private MessageNotification getMessageNotification(String account,
